@@ -1,0 +1,272 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(to right, #fffacd, #ffb6e9);
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  background: #F56b67;
+  padding: 15px 60px;
+  position: relative;
+
+
+  font-family: 'sans-serif';
+
+  width: 100%;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+  margin: 0 40px;
+  padding: 0;
+}
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.navbar ul a {
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+  transition: color 0.3s;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #f5d6d6;
+  transition: width 0.3s;
+}
+nav a:hover {
+  color: #fef8f8;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+
+.menu-icon img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.btn {
+  background: #ff4d4d;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+h1 a{
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+.btn:hover, a p:hover {
+  transform: scale(1.05);
+  background: #fc4c4c;
+}
+
+.hk {
+  display: flex;
+  min-height: 100vh;
+ 
+  margin-bottom: 60px; 
+}
+
+.hk-text,
+.hk-image {
+  flex: 1;
+  width: 50%;
+}
+
+.hk-text {
+  background: linear-gradient(to right, #fffcc2, #ffd1cc);
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hk-text h1 {
+  font-size: 50px;
+  margin-bottom: 25px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: #111;
+}
+
+.hk-text p {
+  margin-bottom: 40px;
+  max-width: 500px;
+  font-size: 16px;
+  color: #333;
+}
+
+.hk-text button {
+  background: #f8746d;
+  color: white;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  width: 220px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.hk-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto 60px auto; 
+}
+
+
+.image-grid {
+  display: grid;
+  grid-template-columns:1fr, 1fr;
+  grid-template-rows: repeat(2, 180px);
+  gap: 1rem;
+  flex: 1;
+  max-width: 800px;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+
+.tall {
+  grid-column: 2/3;
+  height: 375px!important;
+  grid-row: 1/3;
+  width: 260px!important;
+
+}
+
+
+.content-box {
+  background: #f15461;
+  padding: 2rem 3rem;
+  border-radius: 6px;
+  flex: 1;
+  max-width: 450px;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-box .small-text {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.content-box h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+.click-btn {
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.click-btn span {
+  font-size: 1.2rem;
+}
+
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon img {
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-text,
+  .hero-image {
+    width: 100%;
+  }
+
+  .hk-text {
+    padding: 40px 30px;
+  }
+
+  .hk-text h1 {
+    font-size: 36px;
+  }
+
+  .hk-text button {
+    width: 180px;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .image-grid {
+    grid-template-rows: repeat(2, 150px);
+  }
+
+  .content-box {
+    text-align: center;
+  }
+}
